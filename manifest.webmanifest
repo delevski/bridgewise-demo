@@ -1,0 +1,33 @@
+{
+  "name": "Bridgewise · concept demo",
+  "short_name": "Bridgewise",
+  "description": "An AI investment companion on live market data, with simulated trades. A concept demo.",
+  "start_url": "/bridgewise-demo/app/investor",
+  "scope": "/bridgewise-demo/",
+  "display_override": [
+    "fullscreen",
+    "standalone"
+  ],
+  "display": "fullscreen",
+  "orientation": "portrait",
+  "background_color": "#0b0b0c",
+  "theme_color": "#0b0b0c",
+  "icons": [
+    {
+      "src": "/bridgewise-demo/icon-192.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "/bridgewise-demo/icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    },
+    {
+      "src": "/bridgewise-demo/icon-maskable-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "maskable"
+    }
+  ]
+}

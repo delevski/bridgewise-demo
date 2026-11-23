@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="robots" content="noindex, nofollow" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+    <title>Bridgewise · Concept demo</title>
+    <meta name="description" content="A concept demo of an AI investment companion, on saved market data with simulated trades. An independent concept, not an official Bridgewise product." />
+    <meta name="theme-color" content="#0B0B0C" />
+    <script>
+      // Set the theme before the first paint: the saved choice, else light. Mirrors src/ui/theme.ts.
+      (function () {
+        var t = null
+        try { t = localStorage.getItem('bw.theme') } catch (e) {}
+        if (t !== 'light' && t !== 'dark') t = 'light'
+        document.documentElement.dataset.theme = t
+        var tc = document.querySelector('meta[name="theme-color"]')
+        if (tc) tc.content = t === 'dark' ? '#0e0e10' : '#f3f2ee'
+        // Opened from the home screen: full screen, no browser bar.
+        if (navigator.standalone || window.matchMedia('(display-mode: standalone), (display-mode: fullscreen)').matches) document.documentElement.dataset.standalone = 'true'
+      })()
+    </script>
+    <link rel="icon" href="/bridgewise-demo/favicon.svg" type="image/svg+xml" />
+    <!-- Installable as a full-screen app ("Add to Home Screen"). -->
+    <link rel="manifest" href="/bridgewise-demo/manifest.webmanifest" />
+    <link rel="apple-touch-icon" href="/bridgewise-demo/apple-touch-icon.png" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="default" />
+    <meta name="apple-mobile-web-app-title" content="Bridgewise" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Geist:wght@400;500;600&family=Geist+Mono:wght@400;500&family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;1,6..72,400&display=swap" />
+    <link rel="stylesheet" href="/bridgewise-demo/assets/main.css" />
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/bridgewise-demo/assets/main.js"></script>
+  </body>
+</html>
